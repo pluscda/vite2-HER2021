@@ -6,6 +6,8 @@
 
 <script setup>
 import { computed, onMounted, ref } from "vue";
+import { useStore } from "vuex";
+const store = useStore();
 const count = ref(0);
 const inc = () => count.value++;
 const computedMsg = computed(() => count.value + "eee!!!");
