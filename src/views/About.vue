@@ -1,27 +1,26 @@
 <template>
-  <div>
-    <div class="about">{{ test }}<el-button type="primary">EL</el-button></div>
-    <div>{{ count }}</div>
-  </div>
+  <button @click="inc">{{ count }}</button>
+  <div>{{ sss }}</div>
 </template>
 
+<script setup>
+import { onMounted, ref } from "vue";
+const count = ref(0);
+const inc = () => count.value++;
+onMounted(() => {
+  console.log("mounted in the composition api!");
+  inc();
+  inc();
+  inc();
+});
+</script>
+
 <script>
-import * as R from "ramda";
 export default {
   data() {
     return {
-      test: R.repeat("T", 10).join("-"),
-      count: "3",
+      sss: "ddd",
     };
-  },
-  mounted() {
-    this.count = this.$store.state.count + 100;
   },
 };
 </script>
-
-<style lang="scss" scoped>
-.about {
-  color: $themeColor;
-}
-</style>
