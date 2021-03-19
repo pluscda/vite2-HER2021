@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite"
+    "serve": "vite",
+    "view": "vite preview"
   },
   "dependencies": {
     "element-plus": "^1.0.2-beta.35",
