@@ -7,6 +7,9 @@ import { inject } from "vue";
 const state = inject("state");
 const actions = inject("actions");
 state.count++;
+(async () => {
+  alert(await actions.sayHi());
+})();
 </script>
 
 <script>
