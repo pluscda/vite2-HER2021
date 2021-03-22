@@ -10,13 +10,17 @@ const store = createStore({
   state: {
     count: 0,
   },
+  actions: {
+   async increment (context) {
+      context.commit('increment')
+    }
+  },
   mutations: {
     increment(state) {
       state.count++;
     },
   },
-  getters: {  },
-  actions: {},
+ 
 });
 
 export default store;

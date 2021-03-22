@@ -1,9 +1,10 @@
 <template>
-  <button @click="inc">{{ count }}</button>
-  <div>{{ sss }}</div>
-  <div>{{ computedMsg }}</div>
-
-  <button class="btn btn-green">Button</button>
+  <div class="p-6 max-w-sm mx-auto bg-white rouned-xl shadow-md flex items-center space-x-4">
+    <div class="flex-shrink-0">
+      <img class="h-12 w-12" src="//unsplash.it/120/120" />
+    </div>
+  </div>
+  <div class="mb-4 rounded-t-md"></div>
 </template>
 
 <script setup>
