@@ -6,16 +6,16 @@ import router from './router';
 import App from './App.vue';
 import 'element-plus/lib/theme-chalk/index.css';
 import './index.css'
-import * as R from "ramda";
+//import * as R from "ramda";
 
 // https://vue3.chengpeiquan.com/plugin.html#%E5%9B%9E%E9%A1%BE-2-x
 const app = createApp(App).use(router).use(ElementPlus);
 //// 把插件的api挂载全局变量到实例上
-app.config.globalProperties.R = R;
-// 你也可以自己写一些全局函数去挂载
-app.config.globalProperties.$log = (text)=> {
-  console.log(text);
-};
+// app.config.globalProperties.R = R;
+// // 你也可以自己写一些全局函数去挂载
+// app.config.globalProperties.$log = (text)=> {
+//   console.log(text);
+// };
 
 /*
 最後的全局變量，在Vue3.x實際上並不是特別推薦，3.x比較推薦按需引入使用。
