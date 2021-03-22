@@ -15,8 +15,6 @@ export default {
   },
   async mounted() {
     this.count = this.state.count;
-    const hi = await this.actions.sayHi();
-    alert(hi);
   },
 };
 </script>

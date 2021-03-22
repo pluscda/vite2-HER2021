@@ -9,7 +9,7 @@ export let state = reactive({...init});
 
 export const actions = {
   async sayHi() {
-    return "hi"
+    return "hi DTC"
   }
 
 }
