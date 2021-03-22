@@ -1,25 +1,12 @@
 <template>
-  <div class="p-6 max-w-sm mx-auto bg-white rouned-xl shadow-md flex items-center space-x-4">
-    <div class="flex-shrink-0">
-      <img class="h-12 w-12" src="//unsplash.it/120/120" />
-    </div>
-  </div>
-  <div class="mb-4 rounded-t-md"></div>
+  <h4>{{ state.count }}</h4>
 </template>
 
 <script setup>
-import { computed, onMounted, ref } from "vue";
-import { useStore } from "vuex";
-const store = useStore();
-const count = ref(0);
-const inc = () => count.value++;
-const computedMsg = computed(() => count.value + "eee!!!");
-onMounted(() => {
-  console.log("mounted in the composition api!");
-  inc();
-  inc();
-  inc();
-});
+import { inject } from "vue";
+const state = inject("state");
+const actions = inject("actions");
+state.count++;
 </script>
 
 <script>
