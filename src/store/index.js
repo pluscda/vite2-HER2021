@@ -11,12 +11,12 @@ const store = createStore({
     count: 0,
   },
   actions: {
-   async increment (context) {
+   async increment (context,payload) {
       context.commit('increment')
     }
   },
   mutations: {
-    increment(state) {
+    increment(state,payload) {
       state.count++;
     },
   },
