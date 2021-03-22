@@ -4,7 +4,7 @@ const init = {
   count:999,
 };
 
-export const state = reactive({...init});
+export let state = reactive({...init});
 
 export const actions = {
   async sayHi() {
