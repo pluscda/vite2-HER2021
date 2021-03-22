@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .btn {
   @apply py-2 px-4 font-semibold rounded-lg shadow-md;
 }
