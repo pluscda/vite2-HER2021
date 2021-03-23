@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 const { resolve } = require('path');
-import path from 'path';
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,7 +19,7 @@ export default defineConfig({
   resolve: {
     // 设置别名
     alias: {
-      '@': path.resolve(__dirname, 'src'),//設置別名
+      '@': resolve(__dirname, 'src'),//設置別名
       '@/views': resolve(__dirname, 'src/views/'),
       '@/styles': resolve(__dirname, 'src/styles/'),
     },
